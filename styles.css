@@ -217,9 +217,29 @@ img{ display:block; max-width:100%; }
   opacity:.4; mix-blend-mode:multiply;
 }
 .hero__content{ position:relative; z-index:2; max-width:840px; }
+.hero__content--center{ margin:0 auto; max-width:760px; text-align:center; }
+.hero__content--center .hero__sub{ margin-left:auto; margin-right:auto; }
+.hero__content--center .hero__cta{ justify-content:center; }
 .hero__eyebrow{
   font-family:'Oswald',sans-serif; text-transform:uppercase;
   letter-spacing:.4em; font-size:.8rem; color:var(--green-2); margin-bottom:22px;
+}
+/* real brand logo as hero centerpiece, lit by a soft spotlight so the
+   black wordmark reads against the dark, gritty background */
+.hero__logo{
+  position:relative; display:inline-block; margin:0; isolation:isolate;
+  padding:4% 7% 6%;
+}
+.hero__logo::before{
+  content:""; position:absolute; inset:0; z-index:0;
+  background:radial-gradient(ellipse 72% 78% at 50% 52%,
+    rgba(233,231,224,.96) 0%, rgba(233,231,224,.88) 42%,
+    rgba(233,231,224,.4) 68%, rgba(233,231,224,0) 84%);
+}
+.hero__logo img{
+  position:relative; z-index:1;
+  display:block; width:min(560px,80vw); height:auto; max-width:80vw;
+  filter:drop-shadow(0 24px 46px rgba(0,0,0,.55));
 }
 .hero__title{
   font-family:'Anton',sans-serif; font-weight:400;
