@@ -34,7 +34,7 @@ const PRODUCTS = [
 
 /* ---- athletes ---- */
 const ATHLETES = [
-  { name:'Tommy McMillen', nick:'"Gunz" — UFC / MMA', sport:'Mixed Martial Arts', img:IMG.fighter,
+  { name:'Tommy "Gunz" McMillen', nick:'UFC / MMA', sport:'Mixed Martial Arts', img:IMG.fighter,
     bio:"Dana White's Contender Series winner in 2025. Explosive power and calculated aggression — UFC debut set for March 2026. Blue-collar work ethic that refuses to break under pressure." },
   { name:'Shane Jordan', nick:'"Suga" — BKFC', sport:'Bare-Knuckle Boxing', img:IMG.boxer,
     bio:"Rising bare-knuckle bantamweight out of LA with Boston ties. Grit, discipline and fearless determination — trainer at Brawler gym and a dedicated girl dad." },
