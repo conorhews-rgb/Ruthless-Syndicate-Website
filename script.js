@@ -187,6 +187,23 @@ function observeReveals(){
   document.querySelectorAll('.reveal:not(.is-in)').forEach(r=>io.observe(r));
 }
 
+/* ---- preloader ---- */
+function initPreloader(){
+  const pre = document.getElementById('preloader');
+  if(!pre) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    pre.remove();
+    return;
+  }
+  document.body.classList.add('is-loading');
+  requestAnimationFrame(()=> requestAnimationFrame(()=> pre.classList.add('is-in')));
+  setTimeout(()=>{
+    pre.classList.add('is-out');
+    document.body.classList.remove('is-loading');
+    pre.addEventListener('transitionend', ()=> pre.remove(), {once:true});
+  }, 1900);
+}
+
 /* ---- init ---- */
 document.addEventListener('DOMContentLoaded', ()=>{
   renderShop();
@@ -196,4 +213,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
   initNav();
   initSignup();
   observeReveals();
+  initPreloader();
 });
