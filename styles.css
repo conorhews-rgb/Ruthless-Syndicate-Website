@@ -184,16 +184,21 @@ img{ display:block; max-width:100%; }
 
 /* ===================================================================
    INTRO
-   the hero headline renders in its normal, final position from frame
-   one (no separate overlay, nothing to hand off or jump) and simply
-   fades in in place; everything else around it stays invisible (but
-   fully laid out, so nothing shifts) until the headline has settled,
-   then fades in together to reveal the full page
+   the hero headline sits fully formed in its normal, final position
+   from frame one (nothing to hand off or jump); a solid bar covers it
+   and swipes downward to reveal the text top-to-bottom, then
+   everything else around it (still invisible but fully laid out, so
+   nothing shifts) fades in together to reveal the full page
    =================================================================== */
 body.is-loading{ overflow:hidden; }
 
-.hero__headline{ opacity:0; transition:opacity 1.3s var(--ease); }
-body.is-text-in .hero__headline{ opacity:1; }
+.hero__swipe{
+  position:absolute; inset:0; z-index:2;
+  background:linear-gradient(165deg,var(--green-2),var(--green) 60%,var(--green-deep));
+  transform:translateY(0);
+  transition:transform 1s var(--ease);
+}
+body.is-text-in .hero__swipe{ transform:translateY(102%); }
 
 #nav,
 .hero__bg,
@@ -213,7 +218,7 @@ body:not(.is-revealed) .hero__logo-bg,
 body:not(.is-revealed) .hero__grain{ opacity:0; }
 
 @media(prefers-reduced-motion:reduce){
-  .hero__headline,#nav,.hero__bg,.hero__logo-bg,.hero__grain,
+  .hero__swipe,#nav,.hero__bg,.hero__logo-bg,.hero__grain,
   .hero__eyebrow,.hero__sub,.hero__cta,.hero__scroll{ transition:none; }
 }
 
@@ -268,12 +273,13 @@ body:not(.is-revealed) .hero__grain{ opacity:0; }
   letter-spacing:.4em; font-size:.8rem; color:var(--green-2); margin-bottom:22px;
 }
 .hero__headline{
+  position:relative; overflow:hidden;
   font-family:'Anton',sans-serif; font-weight:400;
   font-size:clamp(2.6rem,6.4vw,4.6rem); line-height:1.05;
   text-transform:uppercase; letter-spacing:.5px;
   text-shadow:0 6px 34px rgba(0,0,0,.65);
 }
-.hero__headline span{ color:var(--green-2); }
+.hero__headline .accent{ color:var(--green-2); }
 .hero__sub{ color:var(--muted); max-width:52ch; font-size:1.05rem; margin-top:22px; }
 .hero__cta{ display:flex; gap:16px; margin-top:34px; flex-wrap:wrap; }
 
