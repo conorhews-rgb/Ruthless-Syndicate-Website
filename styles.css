@@ -92,14 +92,9 @@ img{ display:block; max-width:100%; }
 }
 .brand{ display:flex; align-items:center; gap:12px; }
 .brand__mark{
-  font-family:'Anton',sans-serif;
-  display:grid; place-items:center;
-  width:42px; height:42px;
-  background:var(--green);
-  color:#fff;
-  font-size:1.1rem; letter-spacing:1px;
-  clip-path:polygon(0 0,100% 0,100% 78%,82% 100%,0 100%);
-  box-shadow:0 6px 20px -6px var(--green-deep);
+  height:46px; width:auto;
+  object-fit:contain;
+  display:block;
 }
 .brand__text{
   font-family:'Oswald',sans-serif;
