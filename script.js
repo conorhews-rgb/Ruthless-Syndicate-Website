@@ -12,6 +12,8 @@ const IMG = {
   crop:   'https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=700&q=80',
   legging:'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=700&q=80',
   bag:    'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80',
+  loyaltyFront: 'assets/loyalty-tee-front.jpg',
+  loyaltyBack:  'assets/loyalty-tee-back.jpg',
   fighter:'assets/tommy-mcmillen.jpg',
   athlete:'assets/steven-nguyen.png',
   boxer:  'assets/shane-jordan.png',
@@ -30,6 +32,7 @@ const PRODUCTS = [
   { name:"Discipline Sports Crop",   cat:'womens',      cats:['womens','new'],price:'$42',old:null,  badge:'New',  img:IMG.crop },
   { name:'Relentless Leggings',      cat:'womens',      cats:['womens'],     price:'$58', old:null,  badge:null,   img:IMG.legging },
   { name:'Loyalty Gym Duffel',       cat:'accessories', cats:['accessories'],price:'$68', old:null,  badge:null,   img:IMG.bag },
+  { name:'Black Ruthless Syndicate "Loyalty" Tee', cat:'mens', cats:['mens','new'], price:'$38', old:null, badge:'New', img:IMG.loyaltyFront, imgHover:IMG.loyaltyBack },
 ];
 
 /* ---- athletes ---- */
@@ -71,7 +74,10 @@ function renderShop(filter='all'){
       <article class="card" data-cat="${p.cats.join(' ')}">
         <div class="card__media">
           ${p.badge ? `<span class="card__badge">${p.badge}</span>`:''}
-          <div class="media"><div class="media__img" style="background-image:url('${p.img}')"></div></div>
+          <div class="media">
+            <div class="media__img" style="background-image:url('${p.img}')"></div>
+            ${p.imgHover ? `<div class="media__img media__img--hover" style="background-image:url('${p.imgHover}')"></div>` : ''}
+          </div>
           <div class="card__quick"><button class="btn btn--primary btn--block add-btn">Add to Cart</button></div>
         </div>
         <div class="card__body">

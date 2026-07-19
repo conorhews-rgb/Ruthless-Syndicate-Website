@@ -343,6 +343,8 @@ body:not(.is-revealed) .hero__grain{ opacity:0; }
 .card__media{ aspect-ratio:1/1; position:relative; overflow:hidden; }
 .card__media .media{ position:absolute; inset:0; }
 .card:hover .media__img{ transform:scale(1.12); filter:grayscale(0) contrast(1.06); }
+.media__img--hover{ opacity:0; transition:opacity .5s var(--ease), transform .7s var(--ease), filter .5s var(--ease); }
+.card:hover .media__img--hover{ opacity:1; }
 .card__badge{
   position:absolute; top:12px; left:12px; z-index:2;
   font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:.1em;
