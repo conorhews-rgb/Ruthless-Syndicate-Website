@@ -13,7 +13,7 @@ const IMG = {
   legging:'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=700&q=80',
   bag:    'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80',
   fighter:'assets/tommy-mcmillen.jpg',
-  athlete:'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=700&q=80',
+  athlete:'assets/steven-nguyen.png',
   boxer:  'assets/shane-jordan.png',
   bjj:    'https://images.unsplash.com/photo-1555597408-26bc8e548a46?auto=format&fit=crop&w=700&q=80',
   hoops:  'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=700&q=80',
