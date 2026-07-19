@@ -36,9 +36,9 @@ const PRODUCTS = [
 const ATHLETES = [
   { name:'Tommy "Gunz" McMillen', nick:'UFC / MMA', sport:'Mixed Martial Arts', img:IMG.fighter,
     bio:"Dana White's Contender Series winner in 2025. Explosive power and calculated aggression, UFC debut set for March 2026. Blue-collar work ethic that refuses to break under pressure." },
-  { name:'Shane Jordan', nick:'"Suga", BKFC', sport:'Bare-Knuckle Boxing', img:IMG.boxer,
+  { name:'Shane Jordan', nick:'"Suga", BKFC', sport:'Bare-Knuckle Boxing', img:IMG.boxer, pos:'top',
     bio:"Rising bare-knuckle bantamweight out of LA with Boston ties. Grit, discipline and fearless determination, trainer at Brawler gym and a dedicated girl dad." },
-  { name:'Steven Nguyen', nick:'"Ninja"', sport:'Mixed Martial Arts', img:IMG.athlete,
+  { name:'Steven Nguyen', nick:'"Ninja"', sport:'Mixed Martial Arts', img:IMG.athlete, pos:'top',
     bio:"Speed, precision and high fight IQ. Blends technical striking with relentless pace, focus, loyalty and quiet confidence inside the cage." },
   { name:'Mike Fontanez', nick:'"Blessed Southpaw", 12-0-1', sport:'Professional Boxing', img:IMG.train,
     bio:"Undefeated super welterweight out of Nashua, NH. 6'0\" southpaw, 12-0-1 with 8 KOs, signed with CES Boxing. Technical precision meets knockout power." },
@@ -93,7 +93,7 @@ function renderAthletes(){
   ATHLETES.forEach(a=>{
     grid.appendChild(el(`
       <article class="athlete reveal">
-        <div class="media__img" style="background-image:url('${a.img}')"></div>
+        <div class="media__img" style="background-image:url('${a.img}');background-position:${a.pos||'center'}"></div>
         <div class="athlete__info">
           <p class="athlete__sport">${a.sport}</p>
           <h3 class="athlete__name">${a.name}</h3>
