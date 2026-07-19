@@ -16,7 +16,7 @@ const IMG = {
   athlete:'assets/steven-nguyen.png',
   boxer:  'assets/shane-jordan.png',
   bjj:    'assets/charles-rosa.jpg',
-  hoops:  'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=700&q=80',
+  hoops:  'assets/kai-lau-quan.jpg',
   train:  'assets/mike-fontanez.jpg',
 };
 
