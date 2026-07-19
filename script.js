@@ -40,11 +40,11 @@ const ATHLETES = [
     bio:"Rising bare-knuckle bantamweight out of LA with Boston ties. Grit, discipline and fearless determination, trainer at Brawler gym and a dedicated girl dad." },
   { name:'Steven Nguyen', nick:'"Ninja"', sport:'Mixed Martial Arts', img:IMG.athlete, pos:'top',
     bio:"Speed, precision and high fight IQ. Blends technical striking with relentless pace, focus, loyalty and quiet confidence inside the cage." },
-  { name:'Mike Fontanez', nick:'"Blessed Southpaw", 12-0-1', sport:'Professional Boxing', img:IMG.train,
+  { name:'Mike Fontanez', nick:'"Blessed Southpaw", 12-0-1', sport:'Professional Boxing', img:IMG.train, pos:'30% center',
     bio:"Undefeated super welterweight out of Nashua, NH. 6'0\" southpaw, 12-0-1 with 8 KOs, signed with CES Boxing. Technical precision meets knockout power." },
   { name:'Charles Rosa', nick:'"Boston Strong", UFC Vet', sport:'Mixed Martial Arts', img:IMG.bjj,
     bio:"Seasoned UFC veteran out of Boston. Built on grit, durability and elite Brazilian jiu-jitsu, competes with heart and relentless pressure." },
-  { name:'Kai Lau Quan', nick:'KAIPRODIGY', sport:'Basketball', img:IMG.hoops,
+  { name:'Kai Lau Quan', nick:'KAIPRODIGY', sport:'Basketball', img:IMG.hoops, pos:'10% center',
     bio:"One of Boston City League's most dynamic scorers. 20+ PPG, 1,000+ career points in three seasons, founded KAIPRODIGY Giveback, raising $7K+ for the Greater Boston Food Bank." },
 ];
 
