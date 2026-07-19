@@ -187,21 +187,19 @@ function observeReveals(){
   document.querySelectorAll('.reveal:not(.is-in)').forEach(r=>io.observe(r));
 }
 
-/* ---- preloader ---- */
-function initPreloader(){
-  const pre = document.getElementById('preloader');
-  if(!pre) return;
+/* ---- intro ---- */
+function initIntro(){
+  const body = document.body;
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    pre.remove();
+    body.classList.add('is-text-in','is-revealed');
     return;
   }
-  document.body.classList.add('is-loading');
-  requestAnimationFrame(()=> requestAnimationFrame(()=> pre.classList.add('is-in')));
+  body.classList.add('is-loading');
+  requestAnimationFrame(()=> requestAnimationFrame(()=> body.classList.add('is-text-in')));
   setTimeout(()=>{
-    pre.classList.add('is-out');
-    document.body.classList.remove('is-loading');
-    pre.addEventListener('transitionend', ()=> pre.remove(), {once:true});
-  }, 1900);
+    body.classList.add('is-revealed');
+    body.classList.remove('is-loading');
+  }, 1500);
 }
 
 /* ---- init ---- */
@@ -213,5 +211,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
   initNav();
   initSignup();
   observeReveals();
-  initPreloader();
+  initIntro();
 });
