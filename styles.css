@@ -1,5 +1,5 @@
 /* ===================================================================
-   RUTHLESS SYNDICATE — gritty / modern
+   RUTHLESS SYNDICATE: gritty / modern
    =================================================================== */
 
 :root{
@@ -206,7 +206,7 @@ img{ display:block; max-width:100%; }
   content:""; position:absolute; inset:0;
   background:linear-gradient(90deg,rgba(5,5,6,.92) 0%,rgba(5,5,6,.55) 55%,rgba(5,5,6,.2) 100%);
 }
-/* real brand logo, faded and edge-blended into the hero background —
+/* real brand logo, faded and edge-blended into the hero background;
    sits behind the copy as a subtle watermark, not a boxed graphic */
 .hero__logo-bg{
   position:absolute; inset:0; z-index:1; pointer-events:none;

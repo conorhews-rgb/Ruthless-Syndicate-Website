@@ -1,16 +1,16 @@
 # Ruthless Syndicate
 
-Marketing website for **Ruthless Syndicate** — apparel for fighters, lifters, and purpose-driven athletes, and the Official Platinum Sponsor of Combat Zone MMA.
+Marketing website for **Ruthless Syndicate**: apparel for fighters, lifters, and purpose-driven athletes, and the Official Platinum Sponsor of Combat Zone MMA.
 
 > Loyalty. Discipline. Ruthless Pursuit.
 
 ## Stack
 
-Pure static site — no build step, no dependencies.
+Pure static site, no build step, no dependencies.
 
-- `index.html` — page structure and copy
-- `styles.css` — design system (black / white / dark-green, gritty-modern theme)
-- `script.js` — content data (products, athletes, team) and interactions
+- `index.html`: page structure and copy
+- `styles.css`: design system (black / white / dark-green, gritty-modern theme)
+- `script.js`: content data (products, athletes, team) and interactions
 
 ## Features
 
