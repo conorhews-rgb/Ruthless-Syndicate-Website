@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop All Products | Ruthless Syndicate</title>
+  <meta name="description" content="The full Ruthless Syndicate collection: tees, hoodies and headwear built for fighters, lifters and the purpose-driven." />
+  <meta name="theme-color" content="#0f6330" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-180.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ruthless Syndicate" />
+  <meta property="og:title" content="Shop All Products | Ruthless Syndicate" />
+  <meta property="og:description" content="The full collection. Loyalty. Discipline. Ruthless Pursuit." />
+  <meta property="og:image" content="https://conorhews-rgb.github.io/Ruthless-Syndicate-Website/assets/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-text-in is-revealed page-shop">
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="brand" aria-label="Ruthless Syndicate home">
+        <img src="assets/logo-mark.png" alt="" class="brand__mark">
+        <span class="brand__text">Ruthless<span>Syndicate</span></span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="is-current">Shop</a>
+        <a href="index.html#athletes">Athletes</a>
+        <a href="index.html#events">Events</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="cart" id="cartBtn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6 5 3H2"/></svg>
+          <span class="cart__count" id="cartCount">0</span>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== PAGE HEAD ===== -->
+    <section class="shophero">
+      <div class="shophero__inner">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span><span aria-current="page">Shop</span>
+        </nav>
+        <p class="kicker">The Full Locker</p>
+        <h1 class="h1 shophero__title">Shop All Products</h1>
+        <p class="lead shophero__lead">Every piece in the collection. Built to take a beating and keep its edge.</p>
+      </div>
+    </section>
+
+    <!-- ===== CONTROLS + GRID ===== -->
+    <section class="section shopall" id="all">
+      <div class="shopbar">
+        <div class="filters" id="filters">
+          <button class="chip is-active" data-filter="all">All</button>
+          <button class="chip" data-filter="mens">Men's</button>
+          <button class="chip" data-filter="accessories">Accessories</button>
+          <button class="chip" data-filter="new">New Releases</button>
+        </div>
+
+        <div class="shopbar__tools">
+          <div class="field field--search">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" id="shopSearch" placeholder="Search the collection" aria-label="Search products" />
+          </div>
+          <div class="field">
+            <label class="sr-only" for="shopSort">Sort by</label>
+            <select id="shopSort">
+              <option value="featured">Featured</option>
+              <option value="priceUp">Price: low to high</option>
+              <option value="priceDown">Price: high to low</option>
+              <option value="nameAz">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <p class="shopcount"><span id="shopCount">13 pieces</span></p>
+
+      <div class="grid grid--shop" id="shopGrid">
+        <!-- product cards injected by JS -->
+      </div>
+
+      <div class="shopempty" id="shopEmpty" hidden>
+        <h3>Nothing matches that.</h3>
+        <p>Try a different search or clear the filters.</p>
+        <button class="btn btn--ghost" id="shopReset">Reset filters</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== QUICK VIEW ===== -->
+  <div class="qv" id="quickView" hidden role="dialog" aria-modal="true" aria-label="Product quick view">
+    <div class="qv__panel">
+      <button class="qv__close" aria-label="Close quick view">&times;</button>
+      <div class="qv__media">
+        <div class="qv__shot"></div>
+        <div class="qv__sides">
+          <button class="qv__side is-active" data-side="front">Front</button>
+          <button class="qv__side" data-side="back">Back</button>
+        </div>
+      </div>
+      <div class="qv__body">
+        <p class="qv__cat"></p>
+        <h2 class="qv__name"></h2>
+        <p class="qv__price"></p>
+        <p class="qv__stock"></p>
+        <button class="btn btn--primary btn--block qv__add">Add to Cart</button>
+        <p class="qv__note">Free shipping on orders over $100. Sizes run true, size up for an oversized fit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo-mark.png" alt="Ruthless Syndicate" class="brand__mark">
+        <p>Ruthless Syndicate</p>
+        <span class="footer__tag">Loyalty. Discipline. Ruthless Pursuit.</span>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h4>Shop</h4>
+          <a href="shop.html">All Products</a>
+          <a href="shop.html">Men's</a>
+          <a href="shop.html">Accessories</a>
+          <a href="shop.html">New Releases</a>
+        </div>
+        <div>
+          <h4>Brand</h4>
+          <a href="index.html#about">About</a>
+          <a href="index.html#athletes">Athletes</a>
+          <a href="index.html#events">Events</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">Facebook</a>
+          <a href="#" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>&copy; 2026 Ruthless Syndicate. All rights reserved.</span>
+      <span class="footer__legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="common.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>

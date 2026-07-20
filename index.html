@@ -81,20 +81,20 @@
   <section class="section shop" id="shop">
     <div class="section__head reveal">
       <p class="kicker">The Locker</p>
-      <h2 class="h2">Shop the Collection</h2>
-      <p class="lead">Standards that don't bend, from the cage to the street. Built to take a beating and keep its edge.</p>
+      <h2 class="h2">Best Sellers</h2>
+      <p class="lead">The three that move fastest. Standards that don't bend, from the cage to the street.</p>
     </div>
 
-    <div class="filters reveal" id="filters">
-      <button class="chip is-active" data-filter="all">All</button>
-      <button class="chip" data-filter="mens">Men's</button>
-      <button class="chip" data-filter="womens">Women's</button>
-      <button class="chip" data-filter="accessories">Accessories</button>
-      <button class="chip" data-filter="new">New Releases</button>
+    <div class="grid grid--best" id="bestGrid">
+      <!-- best seller cards injected by JS -->
     </div>
 
-    <div class="grid grid--shop" id="shopGrid">
-      <!-- product cards injected by JS -->
+    <div class="shopmore reveal">
+      <a href="shop.html" class="shopmore__link">
+        <span>Shop All Products</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>
+      </a>
+      <p class="shopmore__note">Tees, hoodies and headwear: see the full collection.</p>
     </div>
   </section>
 
@@ -130,6 +130,7 @@
 
       <aside class="event-card reveal">
         <div class="event-card__tag">Next Event</div>
+        <img src="assets/combat-zone-logo.png" alt="Combat Zone MMA" class="event-card__logo" />
         <div class="event-card__num">CZ 93</div>
         <div class="event-card__date">Aug 22, 2026</div>
         <div class="event-card__meta">
@@ -208,10 +209,10 @@
       <div class="footer__cols">
         <div>
           <h4>Shop</h4>
-          <a href="#shop">Men's</a>
-          <a href="#shop">Women's</a>
-          <a href="#shop">Accessories</a>
-          <a href="#shop">New Releases</a>
+          <a href="shop.html">All Products</a>
+          <a href="shop.html">Men's</a>
+          <a href="shop.html">Accessories</a>
+          <a href="shop.html">New Releases</a>
         </div>
         <div>
           <h4>Brand</h4>
@@ -237,6 +238,7 @@
   <!-- toast -->
   <div class="toast" id="toast"></div>
 
+  <script src="common.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
